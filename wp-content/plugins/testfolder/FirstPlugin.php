@@ -12,6 +12,14 @@
 if (!defined('ABSPATH')) {
     die();
 }
+
+if (file_exists(dirname(__FILE__).'/vendor/autoload.php')){
+        require_once dirname(__FILE__).'./vendor/autoload.php';
+}
+use Inc\activate;
+use  Inc\deactive;
+use Inc\Admin\AdminPages;
+
 class FirstPlugin{
     public $plugin;
 
@@ -50,18 +58,19 @@ class FirstPlugin{
         wp_enqueue_style('mypluginstyle',plugins_url('/assets/style.css',__FILE__));
         wp_enqueue_script('mypluginscript',plugins_url('/assets/script.js',__FILE__));
     }
+    public function active(){
+        activate::activate();
+    }
+    public function deactive(){
+        deactive::deactivate();
+    }
 
 }
 
 $firstplugin = new FirstPlugin();
 $firstplugin->register();
 
-//activation
-require_once plugin_dir_path(__FILE__).'include/plugin_activate.php';
-register_activation_hook(__FILE__,array('plugin_activate','activate'));
-//deactivation
-require_once plugin_dir_path(__FILE__).'include/plugin_deactive.php';
-register_deactivation_hook(__FILE__,array('plugin_deactive','deactivate'));
+
 
 
 

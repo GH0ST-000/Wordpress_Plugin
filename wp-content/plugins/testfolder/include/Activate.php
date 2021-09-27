@@ -4,10 +4,11 @@
 /**
  * @package Firstplugin
  */
+namespace Inc;
 
-class plugin_deactive
+class activate
 {
-    public static function deactivate(){
+    public static function activate(){
         flush_rewrite_rules();
     }
 
