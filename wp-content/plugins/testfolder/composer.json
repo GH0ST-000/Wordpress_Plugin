@@ -1,0 +1,14 @@
+{
+    "name": "99559/testfolder",
+    "description": "Composer For Wordpress Plugin",
+    "type": "project",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "luka",
+            "email": "luka.datunashvili01@gmail.com"
+        }
+    ],
+    "minimum-stability": "dev",
+    "require": {}
+}
