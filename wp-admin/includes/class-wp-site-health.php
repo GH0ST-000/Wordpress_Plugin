@@ -2712,7 +2712,7 @@ class WP_Site_Health {
 	 */
 	public function wp_cron_scheduled_check() {
 		// Bootstrap wp-admin, as WP_Cron doesn't do this for us.
-		require_once trailingslashit( ABSPATH ) . 'wp-admin/includes/admin.php';
+		require_once trailingslashit( ABSPATH ) . 'wp-admin/includes/Admin.php';
 
 		$tests = WP_Site_Health::get_tests();
 

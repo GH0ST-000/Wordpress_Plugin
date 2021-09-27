@@ -107,7 +107,7 @@ function ms_site_check() {
 			$admin_email = str_replace( '@', ' AT ', get_site_option( 'admin_email', 'support@' . get_network()->domain ) );
 			wp_die(
 				sprintf(
-					/* translators: %s: Admin email link. */
+					/* translators: %s: Base email link. */
 					__( 'This site has not been activated yet. If you are having problems activating your site, please contact %s.' ),
 					sprintf( '<a href="mailto:%1$s">%1$s</a>', $admin_email )
 				)

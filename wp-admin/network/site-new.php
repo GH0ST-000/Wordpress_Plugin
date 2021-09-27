@@ -256,7 +256,7 @@ printf(
 			</tr>
 		<?php endif; // Languages. ?>
 		<tr class="form-field form-required">
-			<th scope="row"><label for="admin-email"><?php _e( 'Admin Email' ); ?> <span class="required">*</span></label></th>
+			<th scope="row"><label for="admin-email"><?php _e( 'Base Email' ); ?> <span class="required">*</span></label></th>
 			<td><input name="blog[email]" type="email" class="regular-text wp-suggest-user" id="admin-email" data-autocomplete-type="search" data-autocomplete-field="user_email" aria-describedby="site-admin-email" required /></td>
 		</tr>
 		<tr class="form-field">

@@ -949,7 +949,7 @@ function admin_color_scheme_picker( $user_id ) {
 
 	?>
 	<fieldset id="color-picker" class="scheme-list">
-		<legend class="screen-reader-text"><span><?php _e( 'Admin Color Scheme' ); ?></span></legend>
+		<legend class="screen-reader-text"><span><?php _e( 'Base Color Scheme' ); ?></span></legend>
 		<?php
 		wp_nonce_field( 'save-color-scheme', 'color-nonce', false );
 		foreach ( $_wp_admin_css_colors as $color => $color_info ) :
@@ -1407,7 +1407,7 @@ All at ###SITENAME###
 		$value,
 		sprintf(
 			/* translators: New admin email address notification email subject. %s: Site title. */
-			__( '[%s] New Admin Email Address' ),
+			__( '[%s] New Base Email Address' ),
 			wp_specialchars_decode( get_option( 'blogname' ), ENT_QUOTES )
 		),
 		$content

@@ -51,7 +51,7 @@ if ( current_user_can( 'edit_users' ) && ! is_user_admin() ) {
 }
 
 $profile_help = '<p>' . __( 'Your profile contains information about you (your &#8220;account&#8221;) as well as some personal options related to using WordPress.' ) . '</p>' .
-	'<p>' . __( 'You can change your password, turn on keyboard shortcuts, change the color scheme of your WordPress administration screens, and turn off the WYSIWYG (Visual) editor, among other things. You can hide the Toolbar (formerly called the Admin Bar) from the front end of your site, however it cannot be disabled on the admin screens.' ) . '</p>' .
+	'<p>' . __( 'You can change your password, turn on keyboard shortcuts, change the color scheme of your WordPress administration screens, and turn off the WYSIWYG (Visual) editor, among other things. You can hide the Toolbar (formerly called the Base Bar) from the front end of your site, however it cannot be disabled on the admin screens.' ) . '</p>' .
 	'<p>' . __( 'You can select the language you wish to use while using the WordPress administration screen without affecting the language site visitors see.' ) . '</p>' .
 	'<p>' . __( 'Your username cannot be changed, but you can use other fields to enter your real name or a nickname, and change which name to display on your posts.' ) . '</p>' .
 	'<p>' . __( 'You can log out of other devices, such as your phone or a public computer, by clicking the Log Out Everywhere Else button.' ) . '</p>' .
@@ -296,11 +296,11 @@ switch ( $action ) {
 
 		<?php if ( count( $_wp_admin_css_colors ) > 1 && has_action( 'admin_color_scheme_picker' ) ) : ?>
 	<tr class="user-admin-color-wrap">
-		<th scope="row"><?php _e( 'Admin Color Scheme' ); ?></th>
+		<th scope="row"><?php _e( 'Base Color Scheme' ); ?></th>
 		<td>
 			<?php
 			/**
-			 * Fires in the 'Admin Color Scheme' section of the user editing screen.
+			 * Fires in the 'Base Color Scheme' section of the user editing screen.
 			 *
 			 * The section is only enabled if a callback is hooked to the action,
 			 * and if there is more than one defined color scheme for the admin.
@@ -434,7 +434,7 @@ endif;
 
 		if ( is_multisite() && is_network_admin() && ! IS_PROFILE_PAGE && current_user_can( 'manage_network_options' ) && ! isset( $super_admins ) ) {
 			?>
-<tr class="user-super-admin-wrap"><th><?php _e( 'Super Admin' ); ?></th>
+<tr class="user-super-admin-wrap"><th><?php _e( 'Super Base' ); ?></th>
 <td>
 			<?php if ( 0 !== strcasecmp( $profileuser->user_email, get_site_option( 'admin_email' ) ) || ! is_super_admin( $profileuser->ID ) ) : ?>
 <p><label><input type="checkbox" id="super_admin" name="super_admin"<?php checked( is_super_admin( $profileuser->ID ) ); ?> /> <?php _e( 'Grant this user super admin privileges for the Network.' ); ?></label></p>

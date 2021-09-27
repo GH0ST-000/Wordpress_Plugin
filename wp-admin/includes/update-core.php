@@ -210,7 +210,7 @@ $_old_files = array(
 	'wp-admin/css/mu.css',
 	'wp-admin/images/site-admin.png',
 	'wp-admin/includes/mu.php',
-	'wp-admin/wpmu-admin.php',
+	'wp-admin/wpmu-Admin.php',
 	'wp-admin/wpmu-blogs.php',
 	'wp-admin/wpmu-edit.php',
 	'wp-admin/wpmu-options.php',

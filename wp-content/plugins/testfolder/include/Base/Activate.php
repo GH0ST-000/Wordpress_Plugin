@@ -4,7 +4,7 @@
 /**
  * @package Firstplugin
  */
-namespace Inc;
+namespace Inc\Base;
 
 class activate
 {

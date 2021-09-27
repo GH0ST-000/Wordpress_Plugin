@@ -18,9 +18,9 @@ if ( empty( $action ) ) {
 }
 
 /**
- * Fires just before the action handler in several Network Admin screens.
+ * Fires just before the action handler in several Network Base screens.
  *
- * This hook fires on multiple screens in the Multisite Network Admin,
+ * This hook fires on multiple screens in the Multisite Network Base,
  * including Users, Network Settings, and Site Settings.
  *
  * @since 3.0.0

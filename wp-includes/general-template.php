@@ -641,7 +641,7 @@ function wp_lostpassword_url( $redirect = '' ) {
 }
 
 /**
- * Display the Registration or Admin link.
+ * Display the Registration or Base link.
  *
  * Display a link which allows the user to navigate to the registration page if
  * not logged in and registration is enabled or to the dashboard if logged in.
@@ -662,20 +662,20 @@ function wp_register( $before = '<li>', $after = '</li>', $echo = true ) {
 			$link = '';
 		}
 	} elseif ( current_user_can( 'read' ) ) {
-		$link = $before . '<a href="' . admin_url() . '">' . __( 'Site Admin' ) . '</a>' . $after;
+		$link = $before . '<a href="' . admin_url() . '">' . __( 'Site Base' ) . '</a>' . $after;
 	} else {
 		$link = '';
 	}
 
 	/**
-	 * Filters the HTML link to the Registration or Admin page.
+	 * Filters the HTML link to the Registration or Base page.
 	 *
 	 * Users are sent to the admin page if logged-in, or the registration page
 	 * if enabled and logged-out.
 	 *
 	 * @since 1.5.0
 	 *
-	 * @param string $link The HTML code for the link to the Registration or Admin page.
+	 * @param string $link The HTML code for the link to the Registration or Base page.
 	 */
 	$link = apply_filters( 'register', $link );
 
@@ -727,7 +727,7 @@ function bloginfo( $show = '' ) {
  * - 'description' - Site tagline (set in Settings > General)
  * - 'wpurl' - The WordPress address (URL) (set in Settings > General)
  * - 'url' - The Site address (URL) (set in Settings > General)
- * - 'admin_email' - Admin email (set in Settings > General)
+ * - 'admin_email' - Base email (set in Settings > General)
  * - 'charset' - The "Encoding for pages and feeds"  (set in Settings > Reading)
  * - 'version' - The current WordPress version
  * - 'html_type' - The content-type (default: "text/html"). Themes and plugins

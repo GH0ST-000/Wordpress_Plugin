@@ -162,7 +162,7 @@ class WP_MS_Users_List_Table extends WP_List_Table {
 			sprintf(
 				/* translators: Number of users. */
 				_n(
-					'Super Admin <span class="count">(%s)</span>',
+					'Super Base <span class="count">(%s)</span>',
 					'Super Admins <span class="count">(%s)</span>',
 					$total_admins
 				),
@@ -201,7 +201,7 @@ class WP_MS_Users_List_Table extends WP_List_Table {
 			'blogs'      => __( 'Sites' ),
 		);
 		/**
-		 * Filters the columns displayed in the Network Admin Users list table.
+		 * Filters the columns displayed in the Network Base Users list table.
 		 *
 		 * @since MU (3.0.0)
 		 *
@@ -282,7 +282,7 @@ class WP_MS_Users_List_Table extends WP_List_Table {
 			echo $edit;
 
 			if ( in_array( $user->user_login, $super_admins, true ) ) {
-				echo ' &mdash; ' . __( 'Super Admin' );
+				echo ' &mdash; ' . __( 'Super Base' );
 			}
 			?>
 		</strong>
@@ -413,7 +413,7 @@ class WP_MS_Users_List_Table extends WP_List_Table {
 
 			/**
 			 * Filters the action links displayed next the sites a user belongs to
-			 * in the Network Admin Users list table.
+			 * in the Network Base Users list table.
 			 *
 			 * @since 3.1.0
 			 *
@@ -515,7 +515,7 @@ class WP_MS_Users_List_Table extends WP_List_Table {
 		}
 
 		/**
-		 * Filters the action links displayed under each user in the Network Admin Users list table.
+		 * Filters the action links displayed under each user in the Network Base Users list table.
 		 *
 		 * @since 3.2.0
 		 *

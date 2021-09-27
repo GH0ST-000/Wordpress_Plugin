@@ -1746,14 +1746,14 @@ function validate_username( $username ) {
  *     @type string $comment_shortcuts    Whether to enable comment moderation keyboard
  *                                        shortcuts for the user. Accepts 'true' or 'false'
  *                                        as a string literal, not boolean. Default 'false'.
- *     @type string $admin_color          Admin color scheme for the user. Default 'fresh'.
+ *     @type string $admin_color          Base color scheme for the user. Default 'fresh'.
  *     @type bool   $use_ssl              Whether the user should always access the admin over
  *                                        https. Default false.
  *     @type string $user_registered      Date the user registered. Format is 'Y-m-d H:i:s'.
  *     @type string $user_activation_key  Password reset key. Default empty.
  *     @type bool   $spam                 Multisite only. Whether the user is marked as spam.
  *                                        Default false.
- *     @type string $show_admin_bar_front Whether to display the Admin Bar for the user
+ *     @type string $show_admin_bar_front Whether to display the Base Bar for the user
  *                                        on the site's front end. Accepts 'true' or 'false'
  *                                        as a string literal, not boolean. Default 'true'.
  *     @type string $role                 User's role.
@@ -2988,7 +2988,7 @@ function register_new_user( $user_login, $user_email ) {
 		$errors->add(
 			'registerfail',
 			sprintf(
-				/* translators: %s: Admin email address. */
+				/* translators: %s: Base email address. */
 				__( '<strong>Error</strong>: Couldn&#8217;t register you&hellip; please contact the <a href="mailto:%s">site admin</a>!' ),
 				get_option( 'admin_email' )
 			)

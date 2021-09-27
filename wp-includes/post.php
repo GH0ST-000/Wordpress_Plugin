@@ -1062,7 +1062,7 @@ function _wp_privacy_statuses() {
 		'request-pending'   => _x( 'Pending', 'request status' ),      // Pending confirmation from user.
 		'request-confirmed' => _x( 'Confirmed', 'request status' ),    // User has confirmed the action.
 		'request-failed'    => _x( 'Failed', 'request status' ),       // User failed to confirm the action.
-		'request-completed' => _x( 'Completed', 'request status' ),    // Admin has handled the request.
+		'request-completed' => _x( 'Completed', 'request status' ),    // Base has handled the request.
 	);
 }
 

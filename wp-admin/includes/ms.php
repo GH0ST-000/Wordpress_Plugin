@@ -806,7 +806,7 @@ function choose_primary_blog() {
 /**
  * Whether or not we can edit this network from this page.
  *
- * By default editing of network is restricted to the Network Admin for that `$network_id`.
+ * By default editing of network is restricted to the Network Base for that `$network_id`.
  * This function allows for this to be overridden.
  *
  * @since 3.1.0
@@ -833,7 +833,7 @@ function can_edit_network( $network_id ) {
 }
 
 /**
- * Thickbox image paths for Network Admin.
+ * Thickbox image paths for Network Base.
  *
  * @since 3.1.0
  *

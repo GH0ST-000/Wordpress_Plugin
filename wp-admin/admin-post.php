@@ -26,7 +26,7 @@ require_once ABSPATH . 'wp-admin/includes/admin.php';
 
 nocache_headers();
 
-/** This action is documented in wp-admin/admin.php */
+/** This action is documented in wp-admin/Admin.php */
 do_action( 'admin_init' );
 
 $action = empty( $_REQUEST['action'] ) ? '' : $_REQUEST['action'];

@@ -175,7 +175,7 @@ class WP_Plugins_List_Table extends WP_List_Table {
 			 * @since 4.4.0
 			 *
 			 * @param bool $show Whether to show network-active plugins. Default is whether the current
-			 *                   user can manage network plugins (ie. a Super Admin).
+			 *                   user can manage network plugins (ie. a Super Base).
 			 */
 			$show_network_active = apply_filters( 'show_network_active_plugins', $show );
 		}
@@ -875,7 +875,7 @@ class WP_Plugins_List_Table extends WP_List_Table {
 		if ( $screen->in_admin( 'network' ) ) {
 
 			/**
-			 * Filters the action links displayed for each plugin in the Network Admin Plugins list table.
+			 * Filters the action links displayed for each plugin in the Network Base Plugins list table.
 			 *
 			 * @since 3.1.0
 			 *
@@ -889,7 +889,7 @@ class WP_Plugins_List_Table extends WP_List_Table {
 			$actions = apply_filters( 'network_admin_plugin_action_links', $actions, $plugin_file, $plugin_data, $context );
 
 			/**
-			 * Filters the list of action links displayed for a specific plugin in the Network Admin Plugins list table.
+			 * Filters the list of action links displayed for a specific plugin in the Network Base Plugins list table.
 			 *
 			 * The dynamic portion of the hook name, `$plugin_file`, refers to the path
 			 * to the plugin file, relative to the plugins directory.

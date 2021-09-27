@@ -82,7 +82,7 @@ class WP_Admin_Bar {
 	}
 
 	/**
-	 * Add a node (menu item) to the Admin Bar menu.
+	 * Add a node (menu item) to the Base Bar menu.
 	 *
 	 * @since 3.3.0
 	 *

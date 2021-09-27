@@ -194,7 +194,7 @@
 	wp.updates.ajaxLocked = false;
 
 	/**
-	 * Admin notice template.
+	 * Base notice template.
 	 *
 	 * @since 4.6.0
 	 *

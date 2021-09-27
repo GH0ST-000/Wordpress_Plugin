@@ -296,7 +296,7 @@ class WP_REST_Site_Health_Controller extends WP_REST_Controller {
 	/**
 	 * Loads the admin textdomain for Site Health tests.
 	 *
-	 * The {@see WP_Site_Health} class is defined in WP-Admin, while the REST API operates in a front-end context.
+	 * The {@see WP_Site_Health} class is defined in WP-Base, while the REST API operates in a front-end context.
 	 * This means that the translations for Site Health won't be loaded by default in {@see load_default_textdomain()}.
 	 *
 	 * @since 5.6.0

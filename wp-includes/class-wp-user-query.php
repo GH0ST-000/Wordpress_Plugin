@@ -694,8 +694,8 @@ class WP_User_Query {
 	 *
 	 * @param string $string
 	 * @param array  $cols
-	 * @param bool   $wild   Whether to allow wildcard searches. Default is false for Network Admin, true for single site.
-	 *                       Single site allows leading and trailing wildcards, Network Admin only trailing.
+	 * @param bool   $wild   Whether to allow wildcard searches. Default is false for Network Base, true for single site.
+	 *                       Single site allows leading and trailing wildcards, Network Base only trailing.
 	 * @return string
 	 */
 	protected function get_search_sql( $string, $cols, $wild = false ) {

@@ -217,7 +217,7 @@ textarea:focus {
   color: #3858e9;
 }
 
-/* Admin Menu */
+/* Base Menu */
 #adminmenuback,
 #adminmenuwrap,
 #adminmenu {
@@ -253,7 +253,7 @@ textarea:focus {
   border-bottom-color: #f1f1f1;
 }
 
-/* Admin Menu: submenu */
+/* Base Menu: submenu */
 #adminmenu .wp-submenu,
 #adminmenu .wp-has-current-submenu .wp-submenu,
 #adminmenu .wp-has-current-submenu.opensub .wp-submenu,
@@ -286,7 +286,7 @@ textarea:focus {
   color: #33f078;
 }
 
-/* Admin Menu: current */
+/* Base Menu: current */
 #adminmenu .wp-submenu li.current a,
 #adminmenu a.wp-has-current-submenu:focus + .wp-submenu li.current a,
 #adminmenu .wp-has-current-submenu.opensub .wp-submenu li.current a {
@@ -324,7 +324,7 @@ ul#adminmenu > li.current > a.current:after {
   color: #fff;
 }
 
-/* Admin Menu: bubble */
+/* Base Menu: bubble */
 #adminmenu .awaiting-mod,
 #adminmenu .update-plugins {
   color: #fff;
@@ -339,7 +339,7 @@ ul#adminmenu > li.current > a.current:after {
   background: #0c0c0c;
 }
 
-/* Admin Menu: collapse button */
+/* Base Menu: collapse button */
 #collapse-button {
   color: #f3f1f1;
 }
@@ -349,7 +349,7 @@ ul#adminmenu > li.current > a.current:after {
   color: #33f078;
 }
 
-/* Admin Bar */
+/* Base Bar */
 #wpadminbar {
   color: #fff;
   background: #1e1e1e;
@@ -391,7 +391,7 @@ ul#adminmenu > li.current > a.current:after {
   color: #33f078;
 }
 
-/* Admin Bar: submenu */
+/* Base Bar: submenu */
 #wpadminbar .menupop .ab-sub-wrapper {
   background: #0c0c0c;
 }
@@ -448,7 +448,7 @@ ul#adminmenu > li.current > a.current:after {
   color: #f3f1f1;
 }
 
-/* Admin Bar: search */
+/* Base Bar: search */
 #wpadminbar #adminbarsearch:before {
   color: #f3f1f1;
 }
@@ -458,7 +458,7 @@ ul#adminmenu > li.current > a.current:after {
   background: #303030;
 }
 
-/* Admin Bar: recovery mode */
+/* Base Bar: recovery mode */
 #wpadminbar #wp-admin-bar-recovery-mode {
   color: #fff;
   background-color: #3858e9;
@@ -477,7 +477,7 @@ ul#adminmenu > li.current > a.current:after {
   background-color: #324fd2;
 }
 
-/* Admin Bar: my account */
+/* Base Bar: my account */
 #wpadminbar .quicklinks li#wp-admin-bar-my-account.with-avatar > a img {
   border-color: #303030;
   background-color: #303030;

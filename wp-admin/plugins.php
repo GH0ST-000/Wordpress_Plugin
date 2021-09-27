@@ -745,7 +745,7 @@ if ( strlen( $s ) ) {
 /**
  * Fires before the plugins list table is rendered.
  *
- * This hook also fires before the plugins list table is rendered in the Network Admin.
+ * This hook also fires before the plugins list table is rendered in the Network Base.
  *
  * Please note: The 'active' portion of the hook name does not refer to whether the current
  * view is for active plugins, but rather all plugins actively-installed.

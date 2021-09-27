@@ -9,7 +9,7 @@
 if ( is_network_admin() ) {
 
 	/**
-	 * Fires before the administration menu loads in the Network Admin.
+	 * Fires before the administration menu loads in the Network Base.
 	 *
 	 * The hook fires before menus and sub-menus are removed based on user privileges.
 	 *
@@ -20,7 +20,7 @@ if ( is_network_admin() ) {
 } elseif ( is_user_admin() ) {
 
 	/**
-	 * Fires before the administration menu loads in the User Admin.
+	 * Fires before the administration menu loads in the User Base.
 	 *
 	 * The hook fires before menus and sub-menus are removed based on user privileges.
 	 *
@@ -126,7 +126,7 @@ unset( $id, $data, $subs, $first_sub, $old_parent, $new_parent );
 if ( is_network_admin() ) {
 
 	/**
-	 * Fires before the administration menu loads in the Network Admin.
+	 * Fires before the administration menu loads in the Network Base.
 	 *
 	 * @since 3.1.0
 	 *
@@ -136,7 +136,7 @@ if ( is_network_admin() ) {
 } elseif ( is_user_admin() ) {
 
 	/**
-	 * Fires before the administration menu loads in the User Admin.
+	 * Fires before the administration menu loads in the User Base.
 	 *
 	 * @since 3.1.0
 	 *

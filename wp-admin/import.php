@@ -43,7 +43,7 @@ if ( current_user_can( 'install_plugins' ) ) {
 if ( ! empty( $_GET['invalid'] ) && isset( $popular_importers[ $_GET['invalid'] ] ) ) {
 	$importer_id = $popular_importers[ $_GET['invalid'] ]['importer-id'];
 	if ( $importer_id !== $_GET['invalid'] ) { // Prevent redirect loops.
-		wp_redirect( admin_url( 'admin.php?import=' . $importer_id ) );
+		wp_redirect( admin_url( 'Admin.php?import=' . $importer_id ) );
 		exit;
 	}
 	unset( $importer_id );
@@ -172,7 +172,7 @@ if ( empty( $importers ) ) {
 				array(
 					'import' => $importer_id,
 				),
-				self_admin_url( 'admin.php' )
+				self_admin_url( 'Admin.php' )
 			);
 			$action = sprintf(
 				'<a href="%1$s" aria-label="%2$s">%3$s</a>',

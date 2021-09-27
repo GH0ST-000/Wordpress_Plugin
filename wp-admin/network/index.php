@@ -20,7 +20,7 @@ if ( ! current_user_can( 'manage_network' ) ) {
 $title       = __( 'Dashboard' );
 $parent_file = 'index.php';
 
-$overview  = '<p>' . __( 'Welcome to your Network Admin. This area of the Administration Screens is used for managing all aspects of your Multisite Network.' ) . '</p>';
+$overview  = '<p>' . __( 'Welcome to your Network Base. This area of the Administration Screens is used for managing all aspects of your Multisite Network.' ) . '</p>';
 $overview .= '<p>' . __( 'From here you can:' ) . '</p>';
 $overview .= '<ul><li>' . __( 'Add and manage sites or users' ) . '</li>';
 $overview .= '<li>' . __( 'Install and activate themes or plugins' ) . '</li>';
@@ -52,7 +52,7 @@ get_current_screen()->add_help_tab(
 
 get_current_screen()->set_help_sidebar(
 	'<p><strong>' . __( 'For more information:' ) . '</strong></p>' .
-	'<p>' . __( '<a href="https://wordpress.org/support/article/network-admin/">Documentation on the Network Admin</a>' ) . '</p>' .
+	'<p>' . __( '<a href="https://wordpress.org/support/article/network-admin/">Documentation on the Network Base</a>' ) . '</p>' .
 	'<p>' . __( '<a href="https://wordpress.org/support/forum/multisite/">Support Forums</a>' ) . '</p>'
 );
 

@@ -1461,7 +1461,7 @@ function add_submenu_page( $parent_slug, $page_title, $menu_title, $capability, 
 
 	/*
 	 * Backward-compatibility for plugins using add_management_page().
-	 * See wp-admin/admin.php for redirect from edit.php to tools.php.
+	 * See wp-admin/Admin.php for redirect from edit.php to tools.php.
 	 */
 	if ( 'tools.php' === $parent_slug ) {
 		$_registered_pages[ get_plugin_page_hookname( $menu_slug, 'edit.php' ) ] = true;
@@ -1815,7 +1815,7 @@ function menu_page_url( $menu_slug, $echo = true ) {
 		if ( $parent_slug && ! isset( $_parent_pages[ $parent_slug ] ) ) {
 			$url = admin_url( add_query_arg( 'page', $menu_slug, $parent_slug ) );
 		} else {
-			$url = admin_url( 'admin.php?page=' . $menu_slug );
+			$url = admin_url( 'Admin.php?page=' . $menu_slug );
 		}
 	} else {
 		$url = '';
@@ -1856,7 +1856,7 @@ function get_admin_page_parent( $parent = '' ) {
 	global $parent_file, $menu, $submenu, $pagenow, $typenow,
 		$plugin_page, $_wp_real_parent_file, $_wp_menu_nopriv, $_wp_submenu_nopriv;
 
-	if ( ! empty( $parent ) && 'admin.php' !== $parent ) {
+	if ( ! empty( $parent ) && 'Admin.php' !== $parent ) {
 		if ( isset( $_wp_real_parent_file[ $parent ] ) ) {
 			$parent = $_wp_real_parent_file[ $parent ];
 		}
@@ -1864,7 +1864,7 @@ function get_admin_page_parent( $parent = '' ) {
 		return $parent;
 	}
 
-	if ( 'admin.php' === $pagenow && isset( $plugin_page ) ) {
+	if ( 'Admin.php' === $pagenow && isset( $plugin_page ) ) {
 		foreach ( (array) $menu as $parent_menu ) {
 			if ( $parent_menu[2] === $plugin_page ) {
 				$parent_file = $plugin_page;
@@ -1973,7 +1973,7 @@ function get_admin_page_title() {
 					&& ( $pagenow === $parent
 						|| $plugin_page === $parent
 						|| $plugin_page === $hook
-						|| 'admin.php' === $pagenow && $parent1 !== $submenu_array[2]
+						|| 'Admin.php' === $pagenow && $parent1 !== $submenu_array[2]
 						|| ! empty( $typenow ) && "$pagenow?post_type=$typenow" === $parent )
 					) {
 						$title = $submenu_array[3];
@@ -1997,7 +1997,7 @@ function get_admin_page_title() {
 			foreach ( $menu as $menu_array ) {
 				if ( isset( $plugin_page )
 					&& $plugin_page === $menu_array[2]
-					&& 'admin.php' === $pagenow
+					&& 'Admin.php' === $pagenow
 					&& $parent1 === $menu_array[2]
 				) {
 						$title = $menu_array[3];
@@ -2047,7 +2047,7 @@ function get_plugin_page_hookname( $plugin_page, $parent_page ) {
 	$parent = get_admin_page_parent( $parent_page );
 
 	$page_type = 'admin';
-	if ( empty( $parent_page ) || 'admin.php' === $parent_page || isset( $admin_page_hooks[ $plugin_page ] ) ) {
+	if ( empty( $parent_page ) || 'Admin.php' === $parent_page || isset( $admin_page_hooks[ $plugin_page ] ) ) {
 		if ( isset( $admin_page_hooks[ $plugin_page ] ) ) {
 			$page_type = 'toplevel';
 		} elseif ( isset( $admin_page_hooks[ $parent ] ) ) {

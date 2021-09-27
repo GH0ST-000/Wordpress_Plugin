@@ -3655,7 +3655,7 @@ function _wp_keep_alive_customize_changeset_dependent_auto_drafts( $new_status, 
 	 * Actually, in lieu of keeping alive, trash any customization drafts here if the changeset itself is
 	 * getting trashed. This is needed because when a changeset transitions to a draft, then any of the
 	 * dependent auto-draft post/page stubs will also get transitioned to customization drafts which
-	 * are then visible in the WP Admin. We cannot wait for the deletion of the changeset in which
+	 * are then visible in the WP Base. We cannot wait for the deletion of the changeset in which
 	 * _wp_delete_customize_changeset_dependent_auto_drafts() will be called, since they need to be
 	 * trashed to remove from visibility immediately.
 	 */

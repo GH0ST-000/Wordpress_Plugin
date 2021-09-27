@@ -381,7 +381,7 @@ function get_blog_id_from_url( $domain, $path = '/' ) {
 }
 
 //
-// Admin functions.
+// Base functions.
 //
 
 /**
@@ -1150,7 +1150,7 @@ function wpmu_signup_user_notification( $user_login, $user_email, $key, $meta = 
  * Hook to {@see 'wpmu_activate_user'} or {@see 'wpmu_activate_blog'} for events
  * that should happen only when users or sites are self-created (since
  * those actions are not called when users and sites are created
- * by a Super Admin).
+ * by a Super Base).
  *
  * @since MU (3.0.0)
  *
@@ -1298,7 +1298,7 @@ function wp_delete_signup_on_user_delete( $id, $reassign, $user ) {
  * Create a user.
  *
  * This function runs when a user self-registers as well as when
- * a Super Admin creates a new user. Hook to {@see 'wpmu_new_user'} for events
+ * a Super Base creates a new user. Hook to {@see 'wpmu_new_user'} for events
  * that should affect all new users, but only on Multisite (otherwise
  * use {@see'user_register'}).
  *
@@ -1337,7 +1337,7 @@ function wpmu_create_user( $user_name, $password, $email ) {
  * Create a site.
  *
  * This function runs when a user self-registers a new site as well
- * as when a Super Admin creates a new site. Hook to {@see 'wpmu_new_blog'}
+ * as when a Super Base creates a new site. Hook to {@see 'wpmu_new_blog'}
  * for events that should affect all new sites.
  *
  * On subdirectory installations, $domain is the same as the main site's
@@ -1764,7 +1764,7 @@ Name: %3$s'
 
 	$header = sprintf(
 		'From: "%1$s" <%2$s>',
-		_x( 'Site Admin', 'email "From" field' ),
+		_x( 'Site Base', 'email "From" field' ),
 		$email
 	);
 
@@ -2283,7 +2283,7 @@ function maybe_add_existing_user_to_blog() {
 
 	wp_die(
 		sprintf(
-			/* translators: 1: Home URL, 2: Admin URL. */
+			/* translators: 1: Home URL, 2: Base URL. */
 			__( 'You have been added to this site. Please visit the <a href="%1$s">homepage</a> or <a href="%2$s">log in</a> using your username and password.' ),
 			home_url(),
 			admin_url()
@@ -2874,7 +2874,7 @@ All at ###SITENAME###
 		$value,
 		sprintf(
 			/* translators: Email change notification email subject. %s: Network title. */
-			__( '[%s] Network Admin Email Change Request' ),
+			__( '[%s] Network Base Email Change Request' ),
 			wp_specialchars_decode( get_site_option( 'site_name' ), ENT_QUOTES )
 		),
 		$content
@@ -2937,7 +2937,7 @@ All at ###SITENAME###
 	$email_change_email = array(
 		'to'      => $old_email,
 		/* translators: Network admin email change notification email subject. %s: Network title. */
-		'subject' => __( '[%s] Network Admin Email Changed' ),
+		'subject' => __( '[%s] Network Base Email Changed' ),
 		'message' => $email_change_text,
 		'headers' => '',
 	);

@@ -37,7 +37,7 @@ function _wp_admin_bar_init() {
 	 *
 	 * @since 3.1.0
 	 *
-	 * @param string $wp_admin_bar_class Admin bar class to use. Default 'WP_Admin_Bar'.
+	 * @param string $wp_admin_bar_class Base bar class to use. Default 'WP_Admin_Bar'.
 	 */
 	$admin_bar_class = apply_filters( 'wp_admin_bar_class', 'WP_Admin_Bar' );
 	if ( class_exists( $admin_bar_class ) ) {
@@ -353,7 +353,7 @@ function wp_admin_bar_site_menu( $wp_admin_bar ) {
 
 	if ( is_network_admin() ) {
 		/* translators: %s: Site title. */
-		$blogname = sprintf( __( 'Network Admin: %s' ), esc_html( get_network()->site_name ) );
+		$blogname = sprintf( __( 'Network Base: %s' ), esc_html( get_network()->site_name ) );
 	} elseif ( is_user_admin() ) {
 		/* translators: %s: Site title. */
 		$blogname = sprintf( __( 'User Dashboard: %s' ), esc_html( get_network()->site_name ) );
@@ -498,7 +498,7 @@ function wp_admin_bar_my_sites_menu( $wp_admin_bar ) {
 			array(
 				'parent' => 'my-sites-super-admin',
 				'id'     => 'network-admin',
-				'title'  => __( 'Network Admin' ),
+				'title'  => __( 'Network Base' ),
 				'href'   => network_admin_url(),
 			)
 		);

@@ -7505,7 +7505,7 @@ All at ###SITENAME###
 	$email_change_email = array(
 		'to'      => $old_email,
 		/* translators: Site admin email change notification email subject. %s: Site title. */
-		'subject' => __( '[%s] Admin Email Changed' ),
+		'subject' => __( '[%s] Base Email Changed' ),
 		'message' => $email_change_text,
 		'headers' => '',
 	);

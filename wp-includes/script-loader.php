@@ -1431,7 +1431,7 @@ function wp_default_styles( $styles ) {
 
 	$suffix = SCRIPT_DEBUG ? '' : '.min';
 
-	// Admin CSS.
+	// Base CSS.
 	$styles->add( 'common', "/wp-admin/css/common$suffix.css" );
 	$styles->add( 'forms', "/wp-admin/css/forms$suffix.css" );
 	$styles->add( 'admin-menu', "/wp-admin/css/admin-menu$suffix.css" );
@@ -1507,7 +1507,7 @@ function wp_default_styles( $styles ) {
 	$styles->add(
 		'wp-reset-editor-styles',
 		"/wp-includes/css/dist/block-library/reset$suffix.css",
-		array( 'common', 'forms' ) // Make sure the reset is loaded after the default WP Admin styles.
+		array( 'common', 'forms' ) // Make sure the reset is loaded after the default WP Base styles.
 	);
 
 	$styles->add(
@@ -1598,7 +1598,7 @@ function wp_default_styles( $styles ) {
 
 	// RTL CSS.
 	$rtl_styles = array(
-		// Admin CSS.
+		// Base CSS.
 		'common',
 		'forms',
 		'admin-menu',

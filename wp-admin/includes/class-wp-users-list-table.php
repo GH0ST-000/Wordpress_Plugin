@@ -440,7 +440,7 @@ class WP_Users_List_Table extends WP_List_Table {
 
 		if ( is_multisite() && current_user_can( 'manage_network_users' ) ) {
 			if ( in_array( $user_object->user_login, get_super_admins(), true ) ) {
-				$super_admin = ' &mdash; ' . __( 'Super Admin' );
+				$super_admin = ' &mdash; ' . __( 'Super Base' );
 			}
 		}
 

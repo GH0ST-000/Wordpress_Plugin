@@ -286,7 +286,7 @@ endif;
 
 <?php
 /**
- * Fires after the list table on the Users screen in the Multisite Network Admin.
+ * Fires after the list table on the Users screen in the Multisite Network Base.
  *
  * @since 3.1.0
  */

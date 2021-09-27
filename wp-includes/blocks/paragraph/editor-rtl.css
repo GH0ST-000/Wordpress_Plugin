@@ -66,7 +66,7 @@
  * This is a WP-admin agnostic reset
  */
 /**
- * Reset the WP Admin page styles for Gutenberg-like pages.
+ * Reset the WP Base page styles for Gutenberg-like pages.
  */
 .block-editor-block-list__block[data-type="core/paragraph"].has-drop-cap:focus {
   min-height: auto !important;

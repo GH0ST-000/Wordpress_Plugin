@@ -88,14 +88,14 @@ function wp_dashboard_setup() {
 	if ( is_network_admin() ) {
 
 		/**
-		 * Fires after core widgets for the Network Admin dashboard have been registered.
+		 * Fires after core widgets for the Network Base dashboard have been registered.
 		 *
 		 * @since 3.1.0
 		 */
 		do_action( 'wp_network_dashboard_setup' );
 
 		/**
-		 * Filters the list of widgets to load for the Network Admin dashboard.
+		 * Filters the list of widgets to load for the Network Base dashboard.
 		 *
 		 * @since 3.1.0
 		 *
@@ -105,14 +105,14 @@ function wp_dashboard_setup() {
 	} elseif ( is_user_admin() ) {
 
 		/**
-		 * Fires after core widgets for the User Admin dashboard have been registered.
+		 * Fires after core widgets for the User Base dashboard have been registered.
 		 *
 		 * @since 3.1.0
 		 */
 		do_action( 'wp_user_dashboard_setup' );
 
 		/**
-		 * Filters the list of widgets to load for the User Admin dashboard.
+		 * Filters the list of widgets to load for the User Base dashboard.
 		 *
 		 * @since 3.1.0
 		 *
@@ -476,7 +476,7 @@ function wp_network_dashboard_right_now() {
 
 	<?php
 		/**
-		 * Fires in the Network Admin 'Right Now' dashboard widget
+		 * Fires in the Network Base 'Right Now' dashboard widget
 		 * just before the user and site search form fields.
 		 *
 		 * @since MU (3.0.0)
@@ -501,14 +501,14 @@ function wp_network_dashboard_right_now() {
 	</form>
 	<?php
 	/**
-	 * Fires at the end of the 'Right Now' widget in the Network Admin dashboard.
+	 * Fires at the end of the 'Right Now' widget in the Network Base dashboard.
 	 *
 	 * @since MU (3.0.0)
 	 */
 	do_action( 'mu_rightnow_end' );
 
 	/**
-	 * Fires at the end of the 'Right Now' widget in the Network Admin dashboard.
+	 * Fires at the end of the 'Right Now' widget in the Network Base dashboard.
 	 *
 	 * @since MU (3.0.0)
 	 */

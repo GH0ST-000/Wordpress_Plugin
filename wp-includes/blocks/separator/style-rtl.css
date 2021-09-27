@@ -67,7 +67,7 @@
  * This is a WP-admin agnostic reset
  */
 /**
- * Reset the WP Admin page styles for Gutenberg-like pages.
+ * Reset the WP Base page styles for Gutenberg-like pages.
  */
 .wp-block-separator {
   border-top: 1px solid currentColor;

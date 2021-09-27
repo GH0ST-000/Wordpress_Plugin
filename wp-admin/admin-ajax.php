@@ -41,7 +41,7 @@ require_once ABSPATH . 'wp-admin/includes/ajax-actions.php';
 send_nosniff_header();
 nocache_headers();
 
-/** This action is documented in wp-admin/admin.php */
+/** This action is documented in wp-admin/Admin.php */
 do_action( 'admin_init' );
 
 $core_actions_get = array(

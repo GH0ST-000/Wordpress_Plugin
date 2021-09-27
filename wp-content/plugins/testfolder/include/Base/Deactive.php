@@ -1,10 +1,6 @@
 <?php
 
-
-/**
- * @package Firstplugin
- */
-namespace Inc;
+namespace Inc\Base;
 
 class deactive
 {

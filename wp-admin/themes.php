@@ -148,7 +148,7 @@ if ( current_user_can( 'switch_themes' ) ) {
 // Help tab: Adding Themes.
 if ( current_user_can( 'install_themes' ) ) {
 	if ( is_multisite() ) {
-		$help_install = '<p>' . __( 'Installing themes on Multisite can only be done from the Network Admin section.' ) . '</p>';
+		$help_install = '<p>' . __( 'Installing themes on Multisite can only be done from the Network Base section.' ) . '</p>';
 	} else {
 		$help_install = '<p>' . sprintf(
 			/* translators: %s: https://wordpress.org/themes/ */
@@ -319,7 +319,7 @@ if ( is_array( $submenu ) && isset( $submenu['themes.php'] ) ) {
 			$submenu[ $item[2] ] = array_values( $submenu[ $item[2] ] ); // Re-index.
 			$menu_hook           = get_plugin_page_hook( $submenu[ $item[2] ][0][2], $item[2] );
 			if ( file_exists( WP_PLUGIN_DIR . "/{$submenu[$item[2]][0][2]}" ) || ! empty( $menu_hook ) ) {
-				$current_theme_actions[] = "<a class='button$class' href='admin.php?page={$submenu[$item[2]][0][2]}'>{$item[0]}</a>";
+				$current_theme_actions[] = "<a class='button$class' href='Admin.php?page={$submenu[$item[2]][0][2]}'>{$item[0]}</a>";
 			} else {
 				$current_theme_actions[] = "<a class='button$class' href='{$submenu[$item[2]][0][2]}'>{$item[0]}</a>";
 			}

@@ -241,7 +241,7 @@ textarea:focus {
 }
 
 
-/* Admin Menu */
+/* Base Menu */
 
 #adminmenuback,
 #adminmenuwrap,
@@ -281,7 +281,7 @@ textarea:focus {
 }
 
 
-/* Admin Menu: submenu */
+/* Base Menu: submenu */
 
 #adminmenu .wp-submenu,
 #adminmenu .wp-has-current-submenu .wp-submenu,
@@ -311,7 +311,7 @@ textarea:focus {
 }
 
 
-/* Admin Menu: current */
+/* Base Menu: current */
 
 #adminmenu .wp-submenu li.current a,
 #adminmenu a.wp-has-current-submenu:focus + .wp-submenu li.current a,
@@ -348,7 +348,7 @@ ul#adminmenu > li.current > a.current:after {
 }
 
 
-/* Admin Menu: bubble */
+/* Base Menu: bubble */
 
 #adminmenu .awaiting-mod,
 #adminmenu .update-plugins {
@@ -365,7 +365,7 @@ ul#adminmenu > li.current > a.current:after {
 }
 
 
-/* Admin Menu: collapse button */
+/* Base Menu: collapse button */
 
 #collapse-button {
     color: $menu-collapse-text;
@@ -376,7 +376,7 @@ ul#adminmenu > li.current > a.current:after {
     color: $menu-submenu-focus-text;
 }
 
-/* Admin Bar */
+/* Base Bar */
 
 #wpadminbar {
 	color: $menu-text;
@@ -420,7 +420,7 @@ ul#adminmenu > li.current > a.current:after {
 }
 
 
-/* Admin Bar: submenu */
+/* Base Bar: submenu */
 
 #wpadminbar .menupop .ab-sub-wrapper {
 	background: $menu-submenu-background;
@@ -479,7 +479,7 @@ ul#adminmenu > li.current > a.current:after {
 }
 
 
-/* Admin Bar: search */
+/* Base Bar: search */
 
 #wpadminbar #adminbarsearch:before {
 	color: $menu-icon;
@@ -490,7 +490,7 @@ ul#adminmenu > li.current > a.current:after {
 	background: $adminbar-input-background;
 }
 
-/* Admin Bar: recovery mode */
+/* Base Bar: recovery mode */
 
 #wpadminbar #wp-admin-bar-recovery-mode {
 	color: $adminbar-recovery-exit-text;
@@ -510,7 +510,7 @@ ul#adminmenu > li.current > a.current:after {
 	background-color: $adminbar-recovery-exit-background-alt;
 }
 
-/* Admin Bar: my account */
+/* Base Bar: my account */
 
 #wpadminbar .quicklinks li#wp-admin-bar-my-account.with-avatar > a img {
 	border-color: $adminbar-avatar-frame;

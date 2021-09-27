@@ -54,7 +54,7 @@ add_action( 'init', array( 'Akismet', 'init' ) );
 add_action( 'rest_api_init', array( 'Akismet_REST_API', 'init' ) );
 
 if ( is_admin() || ( defined( 'WP_CLI' ) && WP_CLI ) ) {
-	require_once( AKISMET__PLUGIN_DIR . 'class.akismet-admin.php' );
+	require_once( AKISMET__PLUGIN_DIR . 'class.akismet-Admin.php' );
 	add_action( 'init', array( 'Akismet_Admin', 'init' ) );
 }
 

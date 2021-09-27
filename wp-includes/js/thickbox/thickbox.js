@@ -264,7 +264,7 @@ function tb_show(caption, url, imageGroup) {//function called when the user clic
 		$closeBtn = jQuery( '#TB_closeWindowButton' );
 		/*
 		 * If the native Close button icon is visible, move focus on the button
-		 * (e.g. in the Network Admin Themes screen).
+		 * (e.g. in the Network Base Themes screen).
 		 * In other admin screens is hidden and replaced by a different icon.
 		 */
 		if ( $closeBtn.find( '.tb-close-icon' ).is( ':visible' ) ) {

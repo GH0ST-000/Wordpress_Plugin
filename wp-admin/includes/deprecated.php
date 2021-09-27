@@ -24,7 +24,7 @@ function tinymce_include() {
 }
 
 /**
- * Unused Admin function.
+ * Unused Base function.
  *
  * @since 2.0.0
  * @deprecated 2.5.0

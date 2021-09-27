@@ -913,13 +913,13 @@ function is_super_admin( $user_id = false ) {
 }
 
 /**
- * Grants Super Admin privileges.
+ * Grants Super Base privileges.
  *
  * @since 3.0.0
  *
  * @global array $super_admins
  *
- * @param int $user_id ID of the user to be granted Super Admin privileges.
+ * @param int $user_id ID of the user to be granted Super Base privileges.
  * @return bool True on success, false on failure. This can fail when the user is
  *              already a super admin or when the `$super_admins` global is defined.
  */
@@ -930,11 +930,11 @@ function grant_super_admin( $user_id ) {
 	}
 
 	/**
-	 * Fires before the user is granted Super Admin privileges.
+	 * Fires before the user is granted Super Base privileges.
 	 *
 	 * @since 3.0.0
 	 *
-	 * @param int $user_id ID of the user that is about to be granted Super Admin privileges.
+	 * @param int $user_id ID of the user that is about to be granted Super Base privileges.
 	 */
 	do_action( 'grant_super_admin', $user_id );
 
@@ -947,11 +947,11 @@ function grant_super_admin( $user_id ) {
 		update_site_option( 'site_admins', $super_admins );
 
 		/**
-		 * Fires after the user is granted Super Admin privileges.
+		 * Fires after the user is granted Super Base privileges.
 		 *
 		 * @since 3.0.0
 		 *
-		 * @param int $user_id ID of the user that was granted Super Admin privileges.
+		 * @param int $user_id ID of the user that was granted Super Base privileges.
 		 */
 		do_action( 'granted_super_admin', $user_id );
 		return true;
@@ -960,13 +960,13 @@ function grant_super_admin( $user_id ) {
 }
 
 /**
- * Revokes Super Admin privileges.
+ * Revokes Super Base privileges.
  *
  * @since 3.0.0
  *
  * @global array $super_admins
  *
- * @param int $user_id ID of the user Super Admin privileges to be revoked from.
+ * @param int $user_id ID of the user Super Base privileges to be revoked from.
  * @return bool True on success, false on failure. This can fail when the user's email
  *              is the network admin email or when the `$super_admins` global is defined.
  */
@@ -977,11 +977,11 @@ function revoke_super_admin( $user_id ) {
 	}
 
 	/**
-	 * Fires before the user's Super Admin privileges are revoked.
+	 * Fires before the user's Super Base privileges are revoked.
 	 *
 	 * @since 3.0.0
 	 *
-	 * @param int $user_id ID of the user Super Admin privileges are being revoked from.
+	 * @param int $user_id ID of the user Super Base privileges are being revoked from.
 	 */
 	do_action( 'revoke_super_admin', $user_id );
 
@@ -996,11 +996,11 @@ function revoke_super_admin( $user_id ) {
 			update_site_option( 'site_admins', $super_admins );
 
 			/**
-			 * Fires after the user's Super Admin privileges are revoked.
+			 * Fires after the user's Super Base privileges are revoked.
 			 *
 			 * @since 3.0.0
 			 *
-			 * @param int $user_id ID of the user Super Admin privileges were revoked from.
+			 * @param int $user_id ID of the user Super Base privileges were revoked from.
 			 */
 			do_action( 'revoked_super_admin', $user_id );
 			return true;

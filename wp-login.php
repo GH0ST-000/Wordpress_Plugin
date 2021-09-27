@@ -594,7 +594,7 @@ switch ( $action ) {
 				<?php
 
 				printf(
-					/* translators: %s: Admin email address. */
+					/* translators: %s: Base email address. */
 					__( 'Current administration email: %s' ),
 					'<strong>' . esc_html( $admin_email ) . '</strong>'
 				);

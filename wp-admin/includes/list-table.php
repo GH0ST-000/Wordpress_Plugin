@@ -21,7 +21,7 @@
  */
 function _get_list_table( $class, $args = array() ) {
 	$core_classes = array(
-		// Site Admin.
+		// Site Base.
 		'WP_Posts_List_Table'                         => 'posts',
 		'WP_Media_List_Table'                         => 'media',
 		'WP_Terms_List_Table'                         => 'terms',
@@ -35,7 +35,7 @@ function _get_list_table( $class, $args = array() ) {
 		'WP_Plugins_List_Table'                       => 'plugins',
 		'WP_Application_Passwords_List_Table'         => 'application-passwords',
 
-		// Network Admin.
+		// Network Base.
 		'WP_MS_Sites_List_Table'                      => 'ms-sites',
 		'WP_MS_Users_List_Table'                      => 'ms-users',
 		'WP_MS_Themes_List_Table'                     => 'ms-themes',

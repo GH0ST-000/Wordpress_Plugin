@@ -165,12 +165,12 @@ function _wp_menu_output( $menu, $submenu, $submenu_as_parent = true ) {
 					&& ! file_exists( ABSPATH . "/wp-admin/$menu_file" ) )
 			) {
 				$admin_is_parent = true;
-				echo "<a href='admin.php?page={$submenu_items[0][2]}'$class $aria_attributes>$arrow<div class='wp-menu-image$img_class'$img_style aria-hidden='true'>$img</div><div class='wp-menu-name'>$title</div></a>";
+				echo "<a href='Admin.php?page={$submenu_items[0][2]}'$class $aria_attributes>$arrow<div class='wp-menu-image$img_class'$img_style aria-hidden='true'>$img</div><div class='wp-menu-name'>$title</div></a>";
 			} else {
 				echo "\n\t<a href='{$submenu_items[0][2]}'$class $aria_attributes>$arrow<div class='wp-menu-image$img_class'$img_style aria-hidden='true'>$img</div><div class='wp-menu-name'>$title</div></a>";
 			}
 		} elseif ( ! empty( $item[2] ) && current_user_can( $item[1] ) ) {
-			$menu_hook = get_plugin_page_hook( $item[2], 'admin.php' );
+			$menu_hook = get_plugin_page_hook( $item[2], 'Admin.php' );
 			$menu_file = $item[2];
 			$pos       = strpos( $menu_file, '?' );
 
@@ -184,7 +184,7 @@ function _wp_menu_output( $menu, $submenu, $submenu_as_parent = true ) {
 					&& ! file_exists( ABSPATH . "/wp-admin/$menu_file" ) )
 			) {
 				$admin_is_parent = true;
-				echo "\n\t<a href='admin.php?page={$item[2]}'$class $aria_attributes>$arrow<div class='wp-menu-image$img_class'$img_style aria-hidden='true'>$img</div><div class='wp-menu-name'>{$item[0]}</div></a>";
+				echo "\n\t<a href='Admin.php?page={$item[2]}'$class $aria_attributes>$arrow<div class='wp-menu-image$img_class'$img_style aria-hidden='true'>$img</div><div class='wp-menu-name'>{$item[0]}</div></a>";
 			} else {
 				echo "\n\t<a href='{$item[2]}'$class $aria_attributes>$arrow<div class='wp-menu-image$img_class'$img_style aria-hidden='true'>$img</div><div class='wp-menu-name'>{$item[0]}</div></a>";
 			}
@@ -256,11 +256,11 @@ function _wp_menu_output( $menu, $submenu, $submenu_as_parent = true ) {
 						&& file_exists( WP_PLUGIN_DIR . "/$sub_file" )
 						&& ! file_exists( ABSPATH . "/wp-admin/$sub_file" ) )
 				) {
-					// If admin.php is the current page or if the parent exists as a file in the plugins or admin directory.
+					// If Admin.php is the current page or if the parent exists as a file in the plugins or admin directory.
 					if ( ( ! $admin_is_parent && file_exists( WP_PLUGIN_DIR . "/$menu_file" ) && ! is_dir( WP_PLUGIN_DIR . "/{$item[2]}" ) ) || file_exists( $menu_file ) ) {
 						$sub_item_url = add_query_arg( array( 'page' => $sub_item[2] ), $item[2] );
 					} else {
-						$sub_item_url = add_query_arg( array( 'page' => $sub_item[2] ), 'admin.php' );
+						$sub_item_url = add_query_arg( array( 'page' => $sub_item[2] ), 'Admin.php' );
 					}
 
 					$sub_item_url = esc_url( $sub_item_url );

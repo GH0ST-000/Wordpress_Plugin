@@ -54,7 +54,7 @@ get_current_screen()->add_help_tab(
 			'<p>' . __( 'Upload settings control the size of the uploaded files and the amount of available upload space for each site. You can change the default value for specific sites when you edit a particular site. Allowed file types are also listed (space separated only).' ) . '</p>' .
 			'<p>' . __( 'You can set the language, and the translation files will be automatically downloaded and installed (available if your filesystem is writable).' ) . '</p>' .
 			'<p>' . __( 'Menu setting enables/disables the plugin menus from appearing for non super admins, so that only super admins, not site admins, have access to activate plugins.' ) . '</p>' .
-			'<p>' . __( 'Super admins can no longer be added on the Options screen. You must now go to the list of existing users on Network Admin > Users and click on Username or the Edit action link below that name. This goes to an Edit User page where you can check a box to grant super admin privileges.' ) . '</p>',
+			'<p>' . __( 'Super admins can no longer be added on the Options screen. You must now go to the list of existing users on Network Base > Users and click on Username or the Edit action link below that name. This goes to an Edit User page where you can check a box to grant super admin privileges.' ) . '</p>',
 	)
 );
 
@@ -157,7 +157,7 @@ if ( isset( $_GET['updated'] ) ) {
 			</tr>
 
 			<tr>
-				<th scope="row"><label for="admin_email"><?php _e( 'Network Admin Email' ); ?></label></th>
+				<th scope="row"><label for="admin_email"><?php _e( 'Network Base Email' ); ?></label></th>
 				<td>
 					<input name="new_admin_email" type="email" id="admin_email" aria-describedby="admin-email-desc" class="regular-text" value="<?php echo esc_attr( get_site_option( 'admin_email' ) ); ?>" />
 					<p class="description" id="admin-email-desc">

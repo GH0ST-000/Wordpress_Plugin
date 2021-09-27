@@ -3406,7 +3406,7 @@ function get_site_url( $blog_id = null, $path = '', $scheme = null ) {
  * @param string $path   Optional. Path relative to the admin URL. Default 'admin'.
  * @param string $scheme The scheme to use. Default is 'admin', which obeys force_ssl_admin() and is_ssl().
  *                       'http' or 'https' can be passed to force those schemes.
- * @return string Admin URL link with optional path appended.
+ * @return string Base URL link with optional path appended.
  */
 function admin_url( $path = '', $scheme = 'admin' ) {
 	return get_admin_url( null, $path, $scheme );
@@ -3422,7 +3422,7 @@ function admin_url( $path = '', $scheme = 'admin' ) {
  * @param string   $scheme  Optional. The scheme to use. Accepts 'http' or 'https',
  *                          to force those schemes. Default 'admin', which obeys
  *                          force_ssl_admin() and is_ssl().
- * @return string Admin URL link with optional path appended.
+ * @return string Base URL link with optional path appended.
  */
 function get_admin_url( $blog_id = null, $path = '', $scheme = 'admin' ) {
 	$url = get_site_url( $blog_id, 'wp-admin/', $scheme );
@@ -3663,7 +3663,7 @@ function network_home_url( $path = '', $scheme = null ) {
  * @param string $path   Optional path relative to the admin URL. Default empty.
  * @param string $scheme Optional. The scheme to use. Default is 'admin', which obeys force_ssl_admin()
  *                       and is_ssl(). 'http' or 'https' can be passed to force those schemes.
- * @return string Admin URL link with optional path appended.
+ * @return string Base URL link with optional path appended.
  */
 function network_admin_url( $path = '', $scheme = 'admin' ) {
 	if ( ! is_multisite() ) {
@@ -3699,7 +3699,7 @@ function network_admin_url( $path = '', $scheme = 'admin' ) {
  * @param string $path   Optional. Path relative to the admin URL. Default empty.
  * @param string $scheme Optional. The scheme to use. Default is 'admin', which obeys force_ssl_admin()
  *                       and is_ssl(). 'http' or 'https' can be passed to force those schemes.
- * @return string Admin URL link with optional path appended.
+ * @return string Base URL link with optional path appended.
  */
 function user_admin_url( $path = '', $scheme = 'admin' ) {
 	$url = network_site_url( 'wp-admin/user/', $scheme );
@@ -3731,7 +3731,7 @@ function user_admin_url( $path = '', $scheme = 'admin' ) {
  * @param string $path   Optional. Path relative to the admin URL. Default empty.
  * @param string $scheme Optional. The scheme to use. Default is 'admin', which obeys force_ssl_admin()
  *                       and is_ssl(). 'http' or 'https' can be passed to force those schemes.
- * @return string Admin URL link with optional path appended.
+ * @return string Base URL link with optional path appended.
  */
 function self_admin_url( $path = '', $scheme = 'admin' ) {
 	if ( is_network_admin() ) {

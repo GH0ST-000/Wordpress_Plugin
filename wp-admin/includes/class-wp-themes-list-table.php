@@ -99,7 +99,7 @@ class WP_Themes_List_Table extends WP_List_Table {
 			if ( current_user_can( 'install_themes' ) && current_user_can( 'manage_network_themes' ) ) {
 				printf(
 					/* translators: 1: URL to Themes tab on Edit Site screen, 2: URL to Add Themes screen. */
-					__( 'You only have one theme enabled for this site right now. Visit the Network Admin to <a href="%1$s">enable</a> or <a href="%2$s">install</a> more themes.' ),
+					__( 'You only have one theme enabled for this site right now. Visit the Network Base to <a href="%1$s">enable</a> or <a href="%2$s">install</a> more themes.' ),
 					network_admin_url( 'site-themes.php?id=' . $blog_id ),
 					network_admin_url( 'theme-install.php' )
 				);
@@ -108,7 +108,7 @@ class WP_Themes_List_Table extends WP_List_Table {
 			} elseif ( current_user_can( 'manage_network_themes' ) ) {
 				printf(
 					/* translators: %s: URL to Themes tab on Edit Site screen. */
-					__( 'You only have one theme enabled for this site right now. Visit the Network Admin to <a href="%s">enable</a> more themes.' ),
+					__( 'You only have one theme enabled for this site right now. Visit the Network Base to <a href="%s">enable</a> more themes.' ),
 					network_admin_url( 'site-themes.php?id=' . $blog_id )
 				);
 

@@ -3677,7 +3677,7 @@ function wp_ajax_parse_embed() {
 	}
 
 	if ( is_ssl() && 0 === strpos( $url, 'http://' ) ) {
-		// Admin is ssl and the user pasted non-ssl URL.
+		// Base is ssl and the user pasted non-ssl URL.
 		// Check if the provider supports ssl embeds and use that for the preview.
 		$ssl_shortcode = preg_replace( '%^(\\[embed[^\\]]*\\])http://%i', '$1https://', $shortcode );
 		$parsed        = $wp_embed->run_shortcode( $ssl_shortcode );
@@ -3735,7 +3735,7 @@ function wp_ajax_parse_embed() {
 
 	if ( ! empty( $no_ssl_support ) || ( is_ssl() && ( preg_match( '%<(iframe|script|embed) [^>]*src="http://%', $parsed ) ||
 		preg_match( '%<link [^>]*href="http://%', $parsed ) ) ) ) {
-		// Admin is ssl and the embed is not. Iframes, scripts, and other "active content" will be blocked.
+		// Base is ssl and the embed is not. Iframes, scripts, and other "active content" will be blocked.
 		wp_send_json_error(
 			array(
 				'type'    => 'not-ssl',
