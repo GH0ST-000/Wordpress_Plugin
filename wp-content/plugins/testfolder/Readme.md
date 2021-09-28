@@ -23,10 +23,10 @@ Using HTTPS https://github.com/GH0ST-000/Wordpress_Plugin.giT
 ```PHP
 define( 'DB_NAME', 'YOUR DB NAME' );
 
-# returns 'words'
+# require 'password'
 define( 'DB_PASSWORD', 'YOUR DB PASSWORD' );
 
-# returns 'geese'
+# require 'host'
 define( 'DB_HOST', 'DB HOST' );
 
 
