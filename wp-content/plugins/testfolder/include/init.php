@@ -4,6 +4,8 @@ namespace Inc;
 
 use Inc\Base\Enqueue;
 
+use Inc\Base\SettingsLink;
+
 use Inc\Pages\Admin;
 
 final class Init
@@ -12,7 +14,9 @@ final class Init
     {
         return [
           Admin::class,
-            Enqueue::class
+            Enqueue::class,
+           SettingsLink::class
+
         ];
     }
 
