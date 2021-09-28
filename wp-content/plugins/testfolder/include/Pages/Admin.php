@@ -3,18 +3,34 @@
 namespace Inc\Pages;
 
 use \Inc\Base\BaseController;
+use Inc\Api\SettingApi;
 
 class Admin extends  BaseController{
 
-    public function register(){
-        add_action('admin_menu',array($this,'add_admin_pages'));
+    public $settings;
+
+    public $pages = array();
+
+    public function __construct()
+    {
+        $this->settings = new SettingApi();
+
+        $this->pages = array(
+            array(
+                'page_title' => 'First Plugin',
+                'menu_title' => 'PLUGIN',
+                'capability' => 'manage_options',
+                'menu_slug' => 'first_plugin',
+                'callback' => function() { echo '<h1>Testing</h1>'; },
+                'icon_url' => 'dashicons-store',
+                'position' => 110
+            )
+        );
     }
 
-        public function add_admin_pages() {
-        add_menu_page( 'First Plugin', 'First Plugin', 'manage_options', 'first_plugin', array( $this, 'admin_index' ), 'dashicons-store', 90 );
+    public function register()
+    {
+        $this->settings->addPages( $this->pages )->register();
     }
 
-        public function admin_index(){
-        require_once $this->plugin_path.'templates/Admin.php';
     }
-}

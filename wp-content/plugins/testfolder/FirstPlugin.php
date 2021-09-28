@@ -19,6 +19,7 @@ if (file_exists(dirname(__FILE__).'/vendor/autoload.php')){
 }
 function activate(){
 \Inc\Base\activate::activate();
+
 }
 register_activation_hook(__FILE__,'activate');
 function deactivate(){
