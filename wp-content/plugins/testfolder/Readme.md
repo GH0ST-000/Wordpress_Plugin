@@ -13,3 +13,22 @@
 
 * Chat System
 
+## Installation
+
+Clone From Github
+Using HTTPS https://github.com/GH0ST-000/Wordpress_Plugin.giT
+
+## Usage
+
+```PHP
+define( 'DB_NAME', 'YOUR DB NAME' );
+
+# returns 'words'
+define( 'DB_PASSWORD', 'YOUR DB PASSWORD' );
+
+# returns 'geese'
+define( 'DB_HOST', 'DB HOST' );
+
+
+```
+
