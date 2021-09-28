@@ -2,6 +2,7 @@
 
 namespace Inc;
 
+use Inc\Base\BaseController;
 use Inc\Base\Enqueue;
 
 use Inc\Base\SettingsLink;
@@ -15,7 +16,8 @@ final class Init
         return [
           Admin::class,
             Enqueue::class,
-           SettingsLink::class
+           SettingsLink::class,
+
 
         ];
     }
