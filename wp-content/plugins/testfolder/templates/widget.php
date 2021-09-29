@@ -1,3 +1,3 @@
-<h1>
-    HERE !
-</h1>
+<?php
+
+echo "<h1>Widget</h1>";
