@@ -25,7 +25,6 @@ class SettingApi
         return $this;
     }
 
-
     public function withSubPage( string $title = null )
     {
         if ( empty($this->admin_pages) ) {
@@ -41,7 +40,7 @@ class SettingApi
                 'menu_title' => ($title) ? $title : $admin_page['menu_title'],
                 'capability' => $admin_page['capability'],
                 'menu_slug' => $admin_page['menu_slug'],
-                'callback' => function(){echo '<h1>Second Plugin</h1>';}
+                'callback' => $admin_page['callback']
             )
         );
 
@@ -57,14 +56,14 @@ class SettingApi
         return $this;
     }
 
-
     public function addAdminMenu()
     {
         foreach ( $this->admin_pages as $page ) {
             add_menu_page( $page['page_title'], $page['menu_title'], $page['capability'], $page['menu_slug'], $page['callback'], $page['icon_url'], $page['position'] );
         }
-        foreach ( $this->admin_subpages as $pages ) {
-          add_submenu_page( $pages['parent_slug'], $pages['page_title'], $pages['menu_title'], $pages['capability'], $pages['menu_slug'], $pages['callback'] );
+
+        foreach ( $this->admin_subpages as $page ) {
+            add_submenu_page( $page['parent_slug'], $page['page_title'], $page['menu_title'], $page['capability'], $page['menu_slug'], $page['callback'] );
         }
     }
 }

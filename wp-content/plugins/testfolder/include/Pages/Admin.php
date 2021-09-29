@@ -35,8 +35,8 @@ class Admin extends  BaseController{
         'page_title' => 'Custom Post Types',
         'menu_title' => 'CPT',
         'capability' => 'manage_options',
-        'menu_slug' => 'first_plugin_cpt',
-        'callback' => function() { echo '<h1>CPT Manager</h1>'; }
+        'menu_slug' => 'first_plugin',
+        'callback' => function() { echo '<h1>CTP</h1>';;}
     ),
    array(
     'parent_slug' => 'first_plugin',
